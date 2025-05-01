@@ -88,6 +88,21 @@ export default class ParentComponent extends LightningElement {
             }
         }
         setTimeout(() => toast.show(toastOptions2), 5100);
-        
+    }
+    handleShowToast4() {
+        const toast = this.template.querySelector('c-toast-test');
+        let toastOptions = {
+            message: 'Enviando dados...',
+            position: 'bottom-right',
+            backgroundColor: '#455a64',
+            iconColor: '#ffffff',
+            fontOptions: {
+                color: '#ffffff',
+                size: '16px',
+                weight: ''
+            }
+        }
+        toast.showLoading(toastOptions);
+        setTimeout(() => toast.clearToast(), 5100);
     }
 }
