@@ -19,6 +19,11 @@ Cada subpasta representa um exemplo ou variação diferente de toast, permitindo
 
 ## Contribuições
 
+- Convenção de branches: `YYYY-MM-DD`
+- 👨🏻‍💻 [Bruno Zeulli](https://github.com/bzeulli)
+- 👩🏽‍💻 [Michele Rosa](https://github.com/MimjrJ20)
+
+
 ---
 
 📁 Diretório: `custom-Toast`  
