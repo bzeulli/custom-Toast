@@ -1,5 +1,5 @@
 
-# custom-Toast
+# Projeto custom-Toast
 
 Este repositório contém diversos projetos com exemplos de **toasts personalizados** utilizados no Salesforce.
 
@@ -35,7 +35,7 @@ Cada subpasta representa um exemplo ou variação diferente de toast, permitindo
 
 🌎
 
-# custom-Toast
+# Project custom-Toast
 
 This repository contains various projects with examples of **custom toasts** used in Salesforce.
 
