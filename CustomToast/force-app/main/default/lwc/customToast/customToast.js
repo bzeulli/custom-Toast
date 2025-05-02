@@ -14,13 +14,15 @@ export default class CustomToast extends LightningElement {
     show(toastOptions) {
         this.clearToast();
         const toastOptionsProperties = Object.getOwnPropertyNames(toastOptions);
+        console.log(JSON.stringify(toastOptionsProperties));
         const toastFontOptionsProperties = toastOptionsProperties.includes('fontOptions') ? Object.getOwnPropertyNames(toastOptions.fontOptions) : [];
-        let duration = toastOptionsProperties.includes('duration') && (toastOptions.duration != null || toastOptions.duration != '') ? toastOptions.duration : 3000;
-        let backgroundColor = toastOptionsProperties.includes('backgroundColor') && (toastOptions.backgroundColor == null || toastOptions.backgroundColor == '') ? '#29b6f6' : toastOptions.backgroundColor;
+        let duration = !toastOptionsProperties.includes('duration') || toastOptions.duration == null || toastOptions.duration === '' ? toastOptions.duration : 3000;
+        let backgroundColor = !toastOptionsProperties.includes('backgroundColor') || toastOptions.backgroundColor == null || toastOptions.backgroundColor === '' ? '#29b6f6' : toastOptions.backgroundColor;
         let message = !toastOptionsProperties.includes('message') && (toastOptions.message == null || toastOptions.message == '') ? `I'm a toast!` : toastOptions.message;
         let position = !toastOptionsProperties.includes('position') && (toastOptions.position == null || toastOptions.position == '') ? 'bottom-right' : toastOptions.position;
         let width = !toastOptionsProperties.includes('width') && (toastOptions.width == null || toastOptions.width == '') ? 'auto' : toastOptions.width;
-        let persist = toastOptionsProperties.includes('persist') && (toastOptions.persist == null || toastOptions.persist == '') ? false : toastOptions.persist;
+        let height = !toastOptionsProperties.includes('height') && (toastOptions.height == null || toastOptions.height == '') ? 'auto' : toastOptions.height;
+        let persist = !toastOptionsProperties.includes('persist') || toastOptions.persist == null || toastOptions.persist === '' ? false : toastOptions.persist;
         let fontColor = !toastFontOptionsProperties.includes('fontColor') && (toastOptions.fontOptions.color == null || toastOptions.fontOptions.color == '') ? '#ffffff' : toastOptions.fontOptions.color;
         let fontSize = !toastFontOptionsProperties.includes('fontSize') && (toastOptions.fontOptions.size == null || toastOptions.fontOptions.size == '') ? '16px' : toastOptions.fontOptions.size;
         let fontWeight = !toastFontOptionsProperties.includes('fontWeight') && (toastOptions.fontOptions.weight == null || toastOptions.fontOptions.weight == '') ? 'normal' : toastOptions.fontOptions.weight;
@@ -40,6 +42,7 @@ export default class CustomToast extends LightningElement {
         }
 
         if (width) this.toastElement.style.width = width;
+        if (height) this.toastElement.style.height = height;
 
         const iconHtml = showIcon ? this.setIcon(iconOptions) : '';
 
@@ -55,14 +58,13 @@ export default class CustomToast extends LightningElement {
             </div>`;
 
         this.template.querySelector('.toast-container').appendChild(this.toastElement);
-        this.template.querySelector('.toast-close').addEventListener('click', (e) =>{
-                                                                                        const toast = e.target.closest('.toast');
-                                                                                        toast.remove();
-                                                                                    });
+        this.template.querySelector('.toast-close').addEventListener('click', (e) =>{const toast = e.target.closest('.toast');toast.remove();});
 
         if (!persist) {
             this.timeout = setTimeout(() => this.clearToast(), duration);
         }
+
+        setTimeout(() => this.clearToast(), duration);
     }
 
     @api
@@ -98,10 +100,14 @@ export default class CustomToast extends LightningElement {
             this.toastElement.remove();
             this.toastElement = null;
         }
+        if (this.timeout) {
+            clearTimeout(this.timeout);
+            this.timeout = null;
+        }
     }
 
     setIcon(iconOptions) {
-        const toastIconOptionsProperties = Object.getOwnPropertyNames('iconOptions');
+        const toastIconOptionsProperties = Object.getOwnPropertyNames(iconOptions);
         let icon;
         let iconWidth = !toastIconOptionsProperties.includes('width') && (iconOptions.width == null || iconOptions.width == '') ? '24' : iconOptions.width;
         let iconHeight = !toastIconOptionsProperties.includes('height') && (iconOptions.height == null || iconOptions.height == '') ? '24' : iconOptions.height;

@@ -2,13 +2,13 @@ import { LightningElement } from 'lwc';
 
 export default class ParentComponent extends LightningElement {
     handleShowToast() {
-        const toast = this.template.querySelector('c-toast-test');
+        const toast = this.template.querySelector('c-custom-toast');
         let toastOptions = {
             message: 'Novo item criado com sucesso!',
             position: 'bottom-center',
             duration: 3000,
-            backgroundColor: '#FFA500',
-            width: '',
+            height: '50px',
+            width: '900px',
             persist: true,
             showIcon: true,
             iconOptions: {
@@ -50,8 +50,9 @@ export default class ParentComponent extends LightningElement {
         }
         toast.show(toastOptions);
     }
+
     handleShowToast3(){
-        const toast = this.template.querySelector('c-toast-test');
+        const toast = this.template.querySelector('c-custom-toast');
         let toastOptions = {
             message: 'Enviando dados...',
             position: 'bottom-right',
@@ -89,8 +90,9 @@ export default class ParentComponent extends LightningElement {
         }
         setTimeout(() => toast.show(toastOptions2), 5100);
     }
+
     handleShowToast4() {
-        const toast = this.template.querySelector('c-toast-test');
+        const toast = this.template.querySelector('c-custom-toast');
         let toastOptions = {
             message: 'Enviando dados...',
             position: 'bottom-right',
