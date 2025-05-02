@@ -28,3 +28,39 @@ Cada subpasta representa um exemplo ou variação diferente de toast, permitindo
 
 📁 Diretório: `custom-Toast`  
 💡 Tema: Toasts variados utilizados no Salesforce
+
+
+---
+
+---
+
+# custom-Toast
+
+This repository contains various projects with examples of **custom toasts** used in Salesforce.
+
+## Purpose
+
+To demonstrate different ways to display toast messages in Salesforce using Lightning Components (LWC), Apex, and other applicable variations.
+
+## Structure
+
+Each subfolder represents a different toast example or variation, making it easy to reuse and learn from.
+
+## Included Examples (in progress)
+
+- Basic toast using `ShowToastEvent`  
+- Custom toast with personalized icons  
+- Toast with action buttons  
+- Conditional toasts based on business rules  
+
+## Contributions
+
+- Branch naming convention: `YYYY-MM-DD`  
+- 👨🏻‍💻 [Bruno Zeulli](https://github.com/bzeulli)  
+- 👩🏽‍💻 [Michele Rosa](https://github.com/MimjrJ20)  
+
+---
+
+📁 Directory: `custom-Toast`  
+💡 Theme: Various toast implementations in Salesforce
+
