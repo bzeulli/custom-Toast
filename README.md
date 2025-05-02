@@ -1,3 +1,4 @@
+
 # custom-Toast
 
 Este repositório contém diversos projetos com exemplos de **toasts personalizados** utilizados no Salesforce.
@@ -23,8 +24,7 @@ Cada subpasta representa um exemplo ou variação diferente de toast, permitindo
 - 👨🏻‍💻 [Bruno Zeulli](https://github.com/bzeulli)
 - 👩🏽‍💻 [Michele Rosa](https://github.com/MimjrJ20)
 
-
----
+## Mais
 
 📁 Diretório: `custom-Toast`  
 💡 Tema: Toasts variados utilizados no Salesforce
@@ -32,7 +32,8 @@ Cada subpasta representa um exemplo ou variação diferente de toast, permitindo
 
 ---
 
----
+
+🌎
 
 # custom-Toast
 
@@ -59,8 +60,9 @@ Each subfolder represents a different toast example or variation, making it easy
 - 👨🏻‍💻 [Bruno Zeulli](https://github.com/bzeulli)  
 - 👩🏽‍💻 [Michele Rosa](https://github.com/MimjrJ20)  
 
----
+## More
 
 📁 Directory: `custom-Toast`  
 💡 Theme: Various toast implementations in Salesforce
 
+---
