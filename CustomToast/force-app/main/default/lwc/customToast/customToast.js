@@ -14,7 +14,7 @@ export default class CustomToast extends LightningElement {
     show(toastOptions) {
         this.clearToast();
         const toastOptionsProperties = Object.getOwnPropertyNames(toastOptions);
-        console.log(JSON.stringify(toastOptionsProperties));
+        console.log('Show: ',JSON.stringify(toastOptionsProperties));
         const toastFontOptionsProperties = toastOptionsProperties.includes('fontOptions') ? Object.getOwnPropertyNames(toastOptions.fontOptions) : [];
         let duration = !toastOptionsProperties.includes('duration') || toastOptions.duration == null || toastOptions.duration === '' ? toastOptions.duration : 3000;
         let backgroundColor = !toastOptionsProperties.includes('backgroundColor') || toastOptions.backgroundColor == null || toastOptions.backgroundColor === '' ? '#29b6f6' : toastOptions.backgroundColor;

@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Michele Rosa
+  @group             : 
+  @last modified on  : 20-05-2025
+  @last modified by  : Michele Rosa
+-->
+<template>
+    <template if:false={isCompleted}>
+        <lightning-card title="Criar Conta">
+            <lightning-input label="Nome da Conta" value={accountName} onchange={handleNameChange} required></lightning-input>
+            <lightning-button label="Salvar" onclick={handleSave} class="s-m-top"></lightning-button>
+        </lightning-card>
+    </template>
+    <template if:true={isCompleted}> 
+        <div class="completed-card">
+            <p>Conta criada com sucesso!</p>
+            <lightning-button label="Criar outra conta" onclick={handleCreateAnother}></lightning-button>
+        </div>
+    </template> 
+    <c-custom-toast></c-custom-toast>
+</template>
