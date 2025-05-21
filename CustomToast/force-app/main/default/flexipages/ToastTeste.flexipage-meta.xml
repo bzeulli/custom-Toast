@@ -7,6 +7,12 @@
                 <identifier>c_testLwc</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>createAccountWarnMid</componentName>
+                <identifier>c_createAccountWarnMid</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
