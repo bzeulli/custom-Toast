@@ -32,6 +32,37 @@ lightning-input, lightning-button {
 .completed-card {
     background-color: #4CAF50;
     border-radius: 8px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0.5rem; /* padding lateral reduzido */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+    min-height: 200px; /* garante altura para centralização vertical */
+}
+
+.completed-card p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.completed-card lightning-button {
+    margin: 0 !important;
+    width: 100%;
+    max-width: 220px;
+    align-self: center; /* garante centralização horizontal */
+    display: flex;
+    justify-content: center;
+}
+
+.completed-card lightning-button button {
+    width: 100%;
+    justify-content: center;
 }
 
 p {
