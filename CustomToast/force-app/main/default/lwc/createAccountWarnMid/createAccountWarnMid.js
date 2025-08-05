@@ -12,7 +12,7 @@ export default class CreateAccountWarnMid extends LightningElement {
     }
 
     handleSave() {
-        createAccount({ nome: this.accountName })
+        createAccount({ name: this.accountName })
             .then(() => {
                 const toast = this.template.querySelector('c-custom-toast');
                 console.log('Toast: ', toast);
