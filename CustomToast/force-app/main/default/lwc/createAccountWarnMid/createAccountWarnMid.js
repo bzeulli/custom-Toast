@@ -22,7 +22,7 @@ export default class CreateAccountWarnMid extends LightningElement {
                     duration: 5000,
                     backgroundColor: '#f5a623',
                     height: '50px',
-                    width: '400px',
+                    width: '650px',
                     persist: true,
                     showIcon: true,
                     iconOptions: {
