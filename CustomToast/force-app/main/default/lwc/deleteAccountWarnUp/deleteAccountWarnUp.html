@@ -2,7 +2,7 @@
   @description       : 
   @author            : Michele Rosa
   @group             : 
-  @last modified on  : 05-08-2025
+  @last modified on  : 06-08-2025
   @last modified by  : Michele Rosa
 -->
 <template>
@@ -13,7 +13,7 @@
         </lightning-card>
     </template>
     <template if:true={isCompleted}> 
-        <div class="completed-card">
+        <div class="completed-card" style="padding: 2rem; margin-top: 1rem; margin-bottom: 1rem; border-radius: 20px;">
             <p>Conta apagada com sucesso!</p>
             <lightning-button label="Apagar outra conta" onclick={handleDeleteAnother}></lightning-button>
         </div>

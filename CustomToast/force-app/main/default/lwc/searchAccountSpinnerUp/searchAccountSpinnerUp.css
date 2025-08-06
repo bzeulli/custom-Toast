@@ -1,0 +1,102 @@
+:host {
+    display: block;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 2px solid rgb(179, 2, 244);
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+lightning-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: none;
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1.5rem; 
+}
+
+lightning-input input {
+    border: 2px solid rgb(179, 2, 244);
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 16px;
+}
+
+lightning-input, lightning-button {
+    margin: 1rem;
+}
+
+.completed-card {
+    background-color: rgb(179, 2, 244);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    min-height: 200px; /* garante altura para centralização vertical */
+}
+
+.completed-card p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.completed-card lightning-button {
+    margin: 0 !important;
+    width: 100%;
+    max-width: 220px;
+    align-self: center; /* garante centralização horizontal */
+    display: flex;
+    justify-content: center;
+}
+
+.completed-card lightning-button button {
+    width: 100%;
+    justify-content: center;
+}
+
+p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+c-custom-toast {
+    margin-top: 1.5rem;
+}
+
+.custom-table-header {
+    margin-top: 1rem;
+    table-layout: fixed;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.custom-table-body {
+    table-layout: fixed;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.custom-table-scroll {
+    max-height: 50px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.custom-col {
+    width: 50%;
+}
