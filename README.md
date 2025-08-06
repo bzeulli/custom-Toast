@@ -18,6 +18,8 @@ Demonstrar diferentes formas de exibir mensagens toast no Salesforce, utilizando
 
 Cada subpasta representa um exemplo ou variação diferente de toast, permitindo fácil reutilização e aprendizado.
 
+- [Documentação CustomToast](./CustomToast/force-app/main/default/lwc/customToast/README.md)
+
 ## Exemplos incluídos (em andamento)
 
 - Toast básico com `ShowToastEvent`
@@ -61,6 +63,8 @@ Demonstrate different ways to display toast messages in Salesforce using Lightni
 ## Structure
 
 Each subfolder represents a different toast example or variation, allowing for easy reuse and learning.
+
+- [Documentation CustomToast](./CustomToast/force-app/main/default/lwc/customToast/README.md)
 
 ## Included Examples (in progress)
 
