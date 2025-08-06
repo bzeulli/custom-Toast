@@ -53,7 +53,7 @@ export default class SearchAccountSpinnerUp extends LightningElement {
                     position: 'bottom-right',
                     duration: 3000,
                     backgroundColor: '#cb00fdff',
-                    width: '900px',
+                    width: '400px',
                     persist: false,
                     showIcon: true,
                     iconOptions: {
@@ -72,7 +72,7 @@ export default class SearchAccountSpinnerUp extends LightningElement {
                     toast.show(toastOptions2);
                     this.isLoading = false;
                     this.isCompleted = true;
-                }, 5100);
+                }, 3000);
             })
             .catch(error => {
                 this.accounts = []; // limpa lista se erro
@@ -96,7 +96,7 @@ export default class SearchAccountSpinnerUp extends LightningElement {
                     position: 'bottom-right',
                     duration: 3000,
                     backgroundColor: '#f0b2ffff',
-                    width: '900px',
+                    width: '400px',
                     persist: false,
                     showIcon: true,
                     iconOptions: {
@@ -107,7 +107,7 @@ export default class SearchAccountSpinnerUp extends LightningElement {
                     },
                     fontOptions: {
                         color: '#f80909ff',
-                        size: '16px',
+                        size: '20px',
                         weight: ''
                     }
                 }
@@ -115,7 +115,7 @@ export default class SearchAccountSpinnerUp extends LightningElement {
                     toast2.show(toastOptions4);
                     this.isLoading = false;
                     this.isCompleted = false;
-                }, 5100);
+                }, 3000);
             });
     }
 
