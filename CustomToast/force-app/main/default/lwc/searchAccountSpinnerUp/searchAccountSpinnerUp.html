@@ -1,0 +1,48 @@
+<!--
+  @description       : 
+  @author            : Michele Rosa
+  @group             : 
+  @last modified on  : 06-08-2025
+  @last modified by  : Michele Rosa
+-->
+<template>
+    <template if:false={isCompleted}>
+        <lightning-card title="Pesquisar uma Conta pelo nome">
+            <lightning-input label="Nome da Conta" value={accountName} onchange={handleNameChange} required></lightning-input>
+            <lightning-button label="Pesquisar" onclick={handleSearch} class="s-m-top"></lightning-button>
+        </lightning-card>
+    </template>
+    <template if:true={isCompleted}> 
+        <div class="completed-card">
+            <p>Conta(s) encontrada(s) com sucesso!</p>
+            <lightning-button label="Pesquisar outra conta" onclick={handleSearchAnother}></lightning-button>
+            <template if:true={accounts.length}>
+                <template if:false={isLoading}>
+                    <table class="custom-table-header slds-table slds-table_cell-buffer slds-table_bordered">
+                        <thead>
+                            <tr>
+                                <th class="custom-col">Nome</th>
+                                <th class="custom-col">Data de criação</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="custom-table-scroll">
+                        <table class="custom-table-body slds-table slds-table_cell-buffer slds-table_bordered">
+                            <tbody>
+                                <template for:each={accounts} for:item="acc">
+                                    <tr key={acc.Id}>
+                                        <td class="custom-col">
+                                            <a href={acc.accountUrl} target="_blank">{acc.Name}</a>
+                                        </td>
+                                        <td class="custom-col">{acc.createdDateFormatted}</td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </template> 
+    <c-custom-toast></c-custom-toast>
+</template>

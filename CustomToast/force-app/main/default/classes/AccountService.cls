@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : Michele Rosa
  * @group             : 
- * @last modified on  : 05-08-2025
+ * @last modified on  : 06-08-2025
  * @last modified by  : Michele Rosa
 **/
 public with sharing class AccountService {
@@ -33,9 +33,21 @@ public with sharing class AccountService {
         if (String.isBlank(name)) {
             throw new AuraHandledException('Account name cannot be empty.');
         }
-        List<Account> accList = [SELECT Id, Name FROM Account WHERE Name = :name];
+        List<Account> accList = [SELECT Id, Name FROM Account WHERE Name = :name ORDER BY CreatedDate];
         if (accList.isEmpty()) {
             throw new AuraHandledException('No accounts found with the name: ' + name);
+        }
+        return accList;
+    }
+
+    @AuraEnabled(cacheable=true)
+    public static List<Account> getAccountByNameTerm(String name) {
+        if (String.isBlank(name)) {
+            throw new AuraHandledException('Account name cannot be empty.');
+        }
+        List<Account> accList = [SELECT Id, Name, CreatedDate FROM Account WHERE Name LIKE :('%' + name + '%') ORDER BY CreatedDate];
+        if (accList.isEmpty()) {
+            throw new AuraHandledException('No accounts found containing the term: ' + name);
         }
         return accList;
     }
@@ -45,7 +57,7 @@ public with sharing class AccountService {
         if (accountIds.isEmpty()) {
             throw new AuraHandledException('Account Id cannot be empty.');
         }
-        List<Account> accList = [SELECT Id, Name FROM Account WHERE Id = :accountIds];
+        List<Account> accList = [SELECT Id, Name FROM Account WHERE Id = :accountIds ORDER BY CreatedDate];
         if (accList.isEmpty()) {
             throw new AuraHandledException('No accounts found with the ids: ' + accountIds);
         }
@@ -57,7 +69,7 @@ public with sharing class AccountService {
         if (String.isBlank(name)) {
             throw new AuraHandledException('Account name cannot be empty.');
         }
-        List<Account> accList = [SELECT Id, Name FROM Account WHERE Name = :name LIMIT 1];
+        List<Account> accList = [SELECT Id, Name FROM Account WHERE Name = :name ORDER BY CreatedDate LIMIT 1];
         if (accList[0] == null || accList.isEmpty()) {
             throw new AuraHandledException('No accounts found with the name: ' + name);
         }
@@ -69,7 +81,7 @@ public with sharing class AccountService {
         if (String.isBlank(accountId)) {
             throw new AuraHandledException('Account Id cannot be empty.');
         }
-        List<Account> accList = [SELECT Id, Name FROM Account WHERE Id = :accountId LIMIT 1];
+        List<Account> accList = [SELECT Id, Name FROM Account WHERE Id = :accountId ORDER BY CreatedDate LIMIT 1];
         if (accList[0] == null || accList.isEmpty()) {
             throw new AuraHandledException('No accounts found with the ids: ' + accountId);
         }
