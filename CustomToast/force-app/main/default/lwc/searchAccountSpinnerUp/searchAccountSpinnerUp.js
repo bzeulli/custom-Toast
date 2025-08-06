@@ -49,7 +49,7 @@ export default class SearchAccountSpinnerUp extends LightningElement {
                 toast.showLoading(toastOptions);
 
                 let toastOptions2 = {
-                    message: 'Conta encontrada com sucesso!',
+                    message: 'Conta(s) encontrada(s) com sucesso!',
                     position: 'bottom-right',
                     duration: 3000,
                     backgroundColor: '#cb00fdff',
