@@ -19,7 +19,7 @@ export default class DeleteAccountWarnUp extends LightningElement {
                     message: 'Conta apagada com sucesso!',
                     position: 'top-right',
                     duration: 5000,
-                    backgroundColor: '#c4bdbdff',
+                    backgroundColor: '#f52323ff',
                     height: '100px',
                     width: '400px',
                     persist: true,
@@ -31,7 +31,7 @@ export default class DeleteAccountWarnUp extends LightningElement {
                         color: '#ffffff'
                     },
                     fontOptions: {
-                        color: '#f52323ff',
+                        color: '#ffffff',
                         size: '20px',
                         weight: '500'
                     }

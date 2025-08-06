@@ -20,7 +20,7 @@ export default class CreateAccountWarnMid extends LightningElement {
                     message: 'Conta criada com sucesso, lembre-se: deve alterar o propietário!',
                     position: 'bottom-center',
                     duration: 5000,
-                    backgroundColor: '#f5a623',
+                    backgroundColor: '#09d728ff',
                     height: '50px',
                     width: '650px',
                     persist: true,

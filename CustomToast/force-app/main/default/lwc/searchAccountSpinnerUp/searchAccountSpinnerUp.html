@@ -14,7 +14,7 @@
     </template>
     <template if:true={isCompleted}> 
         <div class="completed-card">
-            <p>Conta(s) encontrada(s) com sucesso!</p>
+            <p>Conta(s) encontrada(s)</p>
             <lightning-button label="Pesquisar outra conta" onclick={handleSearchAnother}></lightning-button>
             <template if:true={accounts.length}>
                 <template if:false={isLoading}>
