@@ -2,7 +2,7 @@
     display: block;
     padding: 1.5rem;
     background-color: #ffffff;
-    border: 2px solid rgb(179, 2, 244);
+    border: 2px solid #a65fb8;
     border-radius: 12px;
     max-width: 400px;
     margin: 2rem auto;
@@ -19,7 +19,7 @@ lightning-card {
 }
 
 lightning-input input {
-    border: 2px solid rgb(179, 2, 244);
+    border: 2px solid #a65fb8;
     border-radius: 8px;
     padding: 0.5rem;
     font-size: 16px;
@@ -30,7 +30,7 @@ lightning-input, lightning-button {
 }
 
 .completed-card {
-    background-color: rgb(179, 2, 244);
+    background-color: #a65fb8;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
