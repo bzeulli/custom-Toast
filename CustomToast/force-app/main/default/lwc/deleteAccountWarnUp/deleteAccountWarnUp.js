@@ -32,7 +32,7 @@ export default class DeleteAccountWarnUp extends LightningElement {
                     },
                     fontOptions: {
                         color: '#f52323ff',
-                        size: '16px',
+                        size: '20px',
                         weight: '500'
                     }
                 };
@@ -60,7 +60,7 @@ export default class DeleteAccountWarnUp extends LightningElement {
                     },
                     fontOptions: {
                         color: '#ffffff',
-                        size: '16px',
+                        size: '20px',
                         weight: '500'
                     }
                 };
