@@ -59,6 +59,7 @@
 - Sempre inclua `<c-custom-toast>` no template do componente que irá disparar o toast.
 - Utilize o método `clearToast()` para remover manualmente o toast, se necessário.
 - Consulte o código fonte para mais opções de personalização.
+- Caso precise utilizar mais de um toast ao mesmo tempo ou configurações personalizadas diferentes, use dois ou mais componentes de toast e os diferencia por Id ou classe no template.
 
 ---
 
