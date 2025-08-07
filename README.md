@@ -27,6 +27,10 @@ Cada subpasta representa um exemplo ou variação diferente de toast, permitindo
 - Toast com botões de ação
 - Toasts condicionais com base em regras de negócio
 
+![Exemplo Toast Inferior Meio](./CustomToast/images/inf-meio.gif)
+![Exemplo Toast Superior Direita](./CustomToast/images/sup-dir.gif)
+![Exemplo Toast Inferior Direita](./CustomToast/images/inf-dir.gif)
+
 ## Contribuições
 
 - Convenção de branches: `YYYY-MM-DD`
@@ -72,6 +76,14 @@ Each subfolder represents a different toast example or variation, allowing for e
 - Custom toast with personalized icons
 - Toast with action buttons
 - Conditional toasts based on business logic
+
+<!-- Toast examples images -->
+<!-- The use of <p align="center"> is allowed on GitHub, but it is not standard Markdown. 
+If you want just images, you can use pure Markdown like this: -->
+
+![Toast Example 1](./images/toast-exemplo-1.png)
+![Toast Example 2](./images/toast-exemplo-2.png)
+![Toast Example 3](./images/toast-exemplo-3.png)
 
 ## Contributors
 
