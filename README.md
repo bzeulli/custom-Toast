@@ -20,15 +20,17 @@ Cada subpasta representa um exemplo ou variação diferente de toast, permitindo
 
 - [Documentação CustomToast](./CustomToast/force-app/main/default/lwc/customToast/README.md)
 
-## Exemplos incluídos (em andamento)
-
+## Exemplos incluídos 
 - Toast básico com `ShowToastEvent`
 - Toast customizado com ícones personalizados
 - Toast com botões de ação
 - Toasts condicionais com base em regras de negócio
 
+### Exemplo Toast Inferior Meio
 ![Exemplo Toast Inferior Meio](./CustomToast/images/inf-meio.gif)
+### Exemplo Toast Superior Direita
 ![Exemplo Toast Superior Direita](./CustomToast/images/sup-dir.gif)
+### Exemplo Toast Inferior Direita
 ![Exemplo Toast Inferior Direita](./CustomToast/images/inf-dir.gif)
 
 ## Contribuições
